@@ -14,6 +14,23 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizePackageImports: ["@chakra-ui/react"],
   },
+  webpack: (config) => {
+    // Enable filesystem caching with absolute cache location
+    config.cache = {
+      type: "memory",
+    };
+
+    // Suppress caching-related warnings
+    config.ignoreWarnings = [
+      { message: /Caching failed for pack/ },
+    ];
+
+    config.output.publicPath = isProd
+      ? '/_next/'
+      : '/rgd_demo/_next/';
+
+    return config;
+  },
 };
 
 export default nextConfig;

@@ -1,4 +1,5 @@
-import './global.css';
+import { Layout } from '@/components/layout/Layout';
+import '@/styles/global.css';
 
 export const metadata = {
   title: 'Welcome to rgd-demo',
@@ -11,8 +12,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" suppressHydrationWarning={true}>
+      <Layout>{children}</Layout>
     </html>
   );
 }

@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-import type { Config } from "tailwindcss";
-
-export default {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
-  theme: {
-    extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-      },
-    },
-  },
-  plugins: [],
-} satisfies Config;
-=======
 /**
  * tailwind.config.ts
  * Combined configuration with NX integration and theme system
@@ -28,7 +8,7 @@ import { colors } from './src/styles/theme/colors';
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
-  darkMode: ['class'],
+  darkMode: ['class', '[data-theme="dark"]'],
   content: [
     join(
       __dirname,
@@ -118,4 +98,3 @@ const config: Config = {
 };
 
 export default config;
->>>>>>> 6593575 (Add initial project structure with layout, theme provider, and service components)

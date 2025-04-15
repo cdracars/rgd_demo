@@ -7,15 +7,15 @@ import { type ThemeProviderProps } from "next-themes"
 
 // We extend the ThemeProviderProps type to ensure type safety
 export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
-    return (
-        <NextThemesProvider
-      attribute= "data-theme"
-    defaultTheme = "system"
-    enableSystem
-    disableTransitionOnChange
-    {...props }
+  return (
+    <NextThemesProvider
+      attribute="data-theme"
+      defaultTheme="system"
+      enableSystem
+      disableTransitionOnChange
+      {...props}
     >
-        { children }
-        </NextThemesProvider>
+      {children}
+    </NextThemesProvider>
   )
 }

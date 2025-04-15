@@ -1,5 +1,6 @@
 import { Layout } from '@/components/layout/Layout';
-import '@/styles/global.css';
+import '@/styles/global.css'; // Changed to import the correct CSS file with theme variables
+import { ThemeProvider } from '@/styles/theme/provider';
 
 export const metadata = {
   title: 'Welcome to rgd-demo',
@@ -13,7 +14,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning={true}>
-      <Layout>{children}</Layout>
+      <body>
+        <ThemeProvider>
+          <Layout>{children}</Layout>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

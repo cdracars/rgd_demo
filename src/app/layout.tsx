@@ -1,6 +1,6 @@
 import { Layout } from '@/components/layout/Layout';
 import '@/styles/global.css'; // Changed to import the correct CSS file with theme variables
-import { ThemeProvider } from '@/styles/theme/provider';
+import { ThemeProvider } from '@/styles/theme/theme-provider';
 
 export const metadata = {
   title: 'Welcome to rgd-demo',

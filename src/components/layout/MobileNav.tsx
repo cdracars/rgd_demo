@@ -13,7 +13,7 @@ export function MobileNav() {
       {/* Toggle Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="text-white p-2"
+        className="text-foreground p-2"
         aria-label={isOpen ? 'Close menu' : 'Open menu'}
       >
         {isOpen ? (
@@ -52,13 +52,13 @@ export function MobileNav() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="absolute top-full left-0 right-0 bg-rhino-800 border-t border-rhino-700 shadow-lg z-50">
+        <div className="absolute top-full left-0 right-0 bg-background border-t border-border shadow-lg z-50">
           <div className="flex flex-col p-4 space-y-4">
             {siteConfig.nav.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-white hover:text-rhino-200 py-2 transition-colors"
+                className="text-foreground hover:text-primary py-2 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 {item.title}
@@ -67,7 +67,7 @@ export function MobileNav() {
             <Button
               asChild
               variant="default"
-              className="bg-rhino-500 hover:bg-rhino-600 text-white w-full"
+              className="w-full"
             >
               <Link href="#housecall" onClick={() => setIsOpen(false)}>
                 Book Now

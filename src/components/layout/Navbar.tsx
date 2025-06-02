@@ -12,7 +12,7 @@ export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="w-full bg-rhino-800 text-white sticky top-0 z-50">
+    <header className="w-full bg-background border-b border-border sticky top-0 z-50">
       <Container className="flex items-center justify-between py-4">
         <Link href="/" className="flex items-center space-x-2">
           <Image
@@ -22,7 +22,7 @@ export function Navbar() {
             height={120}
             priority
           />
-          <span className="text-xl font-bold tracking-wide">
+          <span className="text-xl font-bold tracking-wide text-foreground">
             {siteConfig.name}
           </span>
         </Link>
@@ -33,7 +33,7 @@ export function Navbar() {
             <Link
               key={item.href}
               href={item.href}
-              className="hover:text-rhino-200 transition-colors"
+              className="text-foreground hover:text-primary transition-colors"
             >
               {item.title}
             </Link>
@@ -44,7 +44,6 @@ export function Navbar() {
           <Button
             asChild
             variant="default"
-            className="bg-rhino-500 hover:bg-rhino-600 text-white"
           >
             <Link href="#housecall">Book Now</Link>
           </Button>
@@ -56,7 +55,7 @@ export function Navbar() {
 
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="text-white p-2"
+            className="text-foreground p-2"
             aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
           >
             {isMenuOpen ? (
@@ -97,14 +96,14 @@ export function Navbar() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden border-t border-rhino-700">
+        <div className="md:hidden border-t border-border">
           <Container className="py-3">
             <nav className="flex flex-col space-y-3">
               {siteConfig.nav.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="text-white hover:text-rhino-200 py-2 transition-colors"
+                  className="text-foreground hover:text-primary py-2 transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.title}
@@ -113,7 +112,7 @@ export function Navbar() {
               <Button
                 asChild
                 variant="default"
-                className="bg-rhino-500 hover:bg-rhino-600 text-white w-full"
+                className="w-full"
               >
                 <Link href="#housecall" onClick={() => setIsMenuOpen(false)}>
                   Book Now

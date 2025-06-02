@@ -11,7 +11,7 @@ export function ThemeToggle() {
       variant="ghost"
       size="icon"
       onClick={toggleTheme}
-      className="p-2 text-rhino-100 hover:text-white hover:bg-rhino-700"
+      className="text-foreground hover:text-primary hover:bg-accent"
       aria-label={isDark ? 'Switch to light theme' : 'Switch to dark theme'}
     >
       {isDark ? (

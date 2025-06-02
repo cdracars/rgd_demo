@@ -5,13 +5,13 @@ export function HousecallIframe() {
   return (
     <section
       id="housecall"
-      className="py-12 bg-white flex flex-col items-center justify-center"
+      className="py-12 bg-background flex flex-col items-center justify-center"
     >
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center text-rhino-800 mb-6">
+        <h2 className="text-3xl font-bold text-center text-foreground mb-6">
           Book Your Appointment
         </h2>
-        <p className="text-center text-rhino-600 mb-8 max-w-xl mx-auto">
+        <p className="text-center text-muted-foreground mb-8 max-w-xl mx-auto">
           Use our online scheduling tool powered by Housecall Pro for a quick
           and easy booking experience.
         </p>

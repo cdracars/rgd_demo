@@ -7,18 +7,18 @@ import { Button } from '../ui/Button';
  */
 export function Hero() {
   return (
-    <section className="relative min-h-[70vh] bg-gradient-to-b from-rhino-800 to-rhino-900 text-white">
+    <section className="relative min-h-[70vh] bg-gradient-to-b from-primary to-primary/90 text-primary-foreground">
       <div className="container mx-auto px-4 py-24">
         <div className="max-w-3xl mx-auto text-center space-y-8">
           <h1 className="text-5xl md:text-6xl font-bold leading-tight">
-            <span className="block text-rhino-200">Professional</span>
+            <span className="block text-primary-foreground/80">Professional</span>
             Garage Door Services
-            <span className="block text-rhino-300 mt-2">
+            <span className="block text-primary-foreground/70 mt-2">
               With Military Precision
             </span>
           </h1>
 
-          <p className="text-xl text-rhino-100 max-w-2xl mx-auto">
+          <p className="text-xl text-primary-foreground/90 max-w-2xl mx-auto">
             From the United States Marine Corps to your garage door - bringing
             discipline, reliability, and excellence to every service call.
           </p>
@@ -27,11 +27,11 @@ export function Hero() {
             <Button
               asChild
               size="lg"
-              className="bg-rhino-500 hover:bg-rhino-600"
+              variant="secondary"
             >
               <Link href="#housecall">Schedule Service</Link>
             </Button>
-            <Button asChild variant="outline" size="lg">
+            <Button asChild variant="secondary" size="lg" className="bg-background text-foreground border border-border hover:bg-accent hover:text-accent-foreground">
               <Link href="#services">Our Services</Link>
             </Button>
           </div>

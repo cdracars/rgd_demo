@@ -8,7 +8,7 @@ import { colors } from './src/styles/theme/colors';
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
-  darkMode: ['class', '[data-theme="dark"]'],
+  darkMode: ['class'],
   content: [
     join(
       __dirname,
